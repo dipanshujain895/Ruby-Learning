@@ -103,3 +103,52 @@ p arr1
 p arr1.shift                # 10 is removed as it is in the start of array
 p arr1.shift(2)             # 20,30 are removed as they are the 2 elements from start
 p arr1
+
+# Iterative over an array using .each() with block     
+# doesnt change anything in the array
+
+arr1.each {|elem| print elem*2," "}
+puts
+
+p arr1
+
+# Filtering Arrays using .each block
+evens = []
+odds = []
+
+arr1.each do |elem|
+    if(elem.even?)
+        evens.append(elem)
+    else
+        odds.append(elem)
+    end
+end
+
+p evens, odds
+
+# Using .each_with_index to get element and index both
+
+arr1.each_with_index do |elem, index|
+    puts("Element at index #{index} = #{elem}")
+end
+
+# .map() and .collect() - Used to perform some operations on elements of array and return new array with updated elements
+
+squared_array = arr1.map {|elem| elem*elem }
+p squared_array
+
+# Filtering Arrays with .select() & .reject()
+# .select -> Filter the elements that satisfy the condition
+# .reject -> Filter the elements that do not satisfy the condition
+
+evens = arr1.select do |elem|
+    elem % 2 == 0                           # All even elements will be selected to be added to new array
+end
+p evens
+
+odds = arr1.reject do |elem|
+    elem % 2 == 0                           # All even elements will be rejected and will not be added to new array
+end
+p odds
+
+

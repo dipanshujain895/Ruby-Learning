@@ -30,3 +30,17 @@ while(count<10)
   puts count
   count+=1
 end
+
+# For loop using ranges
+for i in 1..10 
+  print i," "
+end
+
+puts
+
+# For each loop in arrays
+arr = [11,22,33,44,55,66,77]
+for elem in arr 
+  print elem," "
+end
+

@@ -40,5 +40,11 @@ puts upper_case_alphabets.include?("B")
 puts lower_case_alphabets.member?("z")          # Same as include?()
 puts upper_case_alphabets === "Z"
 
-# Check strings.rb, conditionals.rb, arrays.rb for more examples of usages of ranges
+# Convert ranges to array using .to_a
+p upper_case_alphabets.class
 
+upper_case_alphabets_array = upper_case_alphabets.to_a
+p upper_case_alphabets_array
+p upper_case_alphabets_array.class
+
+# Check strings.rb, conditionals.rb, arrays.rb for more examples of usages of ranges
