@@ -58,3 +58,30 @@ p obj.nil?
 word = "hello world"
 word.capitalize!
 p word
+
+# .dup() and .clone() methods - used to make copy of an object
+# .dup() -> Makes copy of object (if object is frozen make non frozen copy of it)
+# .clone() -> Makes copy of object (if object is frozen copy also remains frozen)
+a = [1, 2, 3, 4]
+b = a.dup
+c = a.clone
+
+p "#{a}, #{a.object_id}"
+p "#{b}, #{b.object_id}"                # Will return different id as new object is created
+p "#{c}, #{c.object_id}"                # Will return different id as new object is created
+
+# Same can be done for string objects
+
+s1 = "Hello World"
+s2 = s1.dup
+
+s1.upcase!                            # Will update original string
+p s1
+p s2                                  # Changes only reflected in s1 and not in s2 because it was a copy
+
+# .freeze() -> Make an object immutable (string and array etc)
+# Note: Clones made from from frozen object will be frozen
+# Duplicate made from frozen object will be non-frozen
+s1.freeze
+# s1.delete!("E")                       # Will give error "Cant modify frozen string"
+p s1

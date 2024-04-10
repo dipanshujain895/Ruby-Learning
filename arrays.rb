@@ -104,7 +104,7 @@ p arr1.shift                # 10 is removed as it is in the start of array
 p arr1.shift(2)             # 20,30 are removed as they are the 2 elements from start
 p arr1
 
-# Iterative over an array using .each() with block     
+# Iterative over an array using .each() with block
 # doesnt change anything in the array
 
 arr1.each {|elem| print elem*2," "}
@@ -152,3 +152,57 @@ end
 p odds
 
 
+# Partitioning Arrays - .partition()
+# partition - split an array based on a matching/non-matching condition
+# returns an array containing 2 arrays
+# first with elements matching the condition and other with non-matching
+#
+foods = ["Steak", "Vegetables", "Steak Burger", "Kale", "Tofu", "Tuna Steaks"]
+
+steakItems = foods.select { |elem| elem.include?("Steak") }
+p steakItems
+
+nonSteakItems = foods.reject {|elem| elem.include?("Steak")}
+p nonSteakItems
+
+splitItemsArr = foods.partition {|elem| elem.include?("Steak")}
+p splitItemsArr
+
+# Ruby assignment also allows destructuring
+steakItems, nonSteakItems = foods.partition {|elem| elem.include?("Steak")}
+p steakItems, nonSteakItems
+
+# .any? and all?
+# .any? -> checks if any element matches the condition
+# .all? -> checks if all elements matches the condition
+
+nums = [11,22,33,44,55]
+
+nums2 = [22,44,66,88]
+
+p nums.any? {|elem| elem % 2 == 0}
+p nums.all? {|elem| elem % 2 == 0}
+p nums2.all? {|elem| elem % 2 == 0}
+
+# .find {}/.detect {} -> finds first element in the array that matches the condition
+p nums.find {|elem| elem % 2 == 0}      # Returns 22
+p nums.detect {|elem| elem % 2 == 0}    # Returns 22
+
+p nums.find {|elem| elem > 60}          # Returns nil as no elem matches the condition
+
+# .index()/.find_index() -> returns the index of first occurence of the element
+
+p nums.index(22)                        # Returns 1
+p nums.find_index(33)                   # Returns 2
+p nums.find_index(99)                   # Returns nil as elem not in array
+
+# .include?(elem) ->  Checks if array contains this elem or not
+p nums.include?(22)                     # Returns true
+p nums.include?(99)                     # Returns false
+
+# .max()/.min() -> returns max or min element of array
+# Works on string array as well checks for lexicographical difference
+# If no element is there in array returns nil
+
+p nums.max
+p nums.min

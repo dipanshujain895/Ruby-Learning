@@ -9,7 +9,6 @@ class Greeter
         puts("Hello #{@name}")
     end
 
-
     def say_bye
         puts("Bye bye, #{@name}")
     end
@@ -24,3 +23,41 @@ greeter = Greeter.new("Rishab")
 p greeter
 greeter.say_hi
 greeter.say_bye
+
+
+# Get automatic getter setters using attr_accessor
+class Student
+    # attr_accessor :name, :age, :percentage
+
+    def initialize(name, age, percentage)
+        @name=name
+        @age=age
+        @percentage=percentage
+    end
+
+    def to_s()
+        "
+        Name: #{@name}
+        Age: #{@age}
+        Percentage: #{@percentage}
+        "
+    end
+
+    def percentage
+      @percentage
+    end
+end
+
+# s3 = Student.new
+# p s3
+s1 = Student.new("Rishab", 21, 85)
+s2 = Student.new("Abhishek",23, 88)
+
+p s1
+p s2
+
+puts s1
+puts s2
+
+# p s1
+# p s1.percentage

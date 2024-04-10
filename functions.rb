@@ -44,3 +44,22 @@ res = concatenate("Hello", "World")
 puts res
 res = concatenate("Hello")          # Passing 1st parameter the 2nd will use default value
 puts res
+
+
+# You can put positional arguments and array of arguments in between
+# *nums is called splat argument
+
+def adder(a,b,*nums, c, d)
+  sum = a+b
+
+  sum_n = 0
+  for i in 0...nums.size
+    sum_n+=nums[i]
+  end
+  sum=sum+sum_n
+
+  sum=sum+c+d
+  return sum
+end
+
+p adder(1,2,3,4,5,6)      # Ruby will read it as a=1,b=2,nums=[3,4],c=5,d=6

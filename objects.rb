@@ -16,3 +16,15 @@ puts nil.class                            # NilClass
 x = nil
 
 p x
+
+# Object Referencing
+#
+#
+a = [1,2,3,4]
+b = a
+
+p "#{a}, #{a.object_id}"
+p "#{b}, #{b.object_id}"                # Will return same as above as reference is copied
+
+p [1,2,3,4].object_id
+p [1,2,3,4].object_id                   # Everytime new object is created with new object_id

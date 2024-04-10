@@ -156,3 +156,50 @@ p s14.slice(20...-2)    # We can combine forward and backward index in ranges
 
 s14[12..15] = "season"
 p s14
+
+# .split() -> Splits a string based on a matching character by default takes space
+# Returns an array of splitted strings
+# if it cannot split returns array with same string
+sentence = "Splits a string based on a matching character by default takes space"
+
+p sentence.split              # Splits on space
+p sentence.split("")          # Splits each character
+p sentence.split("i")         # Splits on (i)
+p sentence.split("\n")        # Splits on next line
+
+# Iterating over string using .chars {}/.each_char {}
+# .chars() -> Returns an array of all characters
+# .each_char {} or .chars {} -> does the operation given in the block for each character in String
+
+
+p sentence.chars()
+
+sentence.each_char {|char| print char," "}
+puts
+
+sentence.chars {|char| print char," "}                # deprecated
+puts
+
+# .join() -> Merge String array into a single string (optionally using a delimiter/separator)
+foods = ["Steak", "Vegetables", "Steak Burger", "Kale", "Tofu", "Tuna Steaks"]
+p foods.join()            # Joins them together
+p foods.join("#")         # Joins them together by adding # at end of each string
+
+# .count() -> Count the frequency of a substring within a string\
+p sentence.count("in")
+p sentence.count("z")       # z is not in string so it will give 0
+
+# .index(sub, start) -> returns the index of first occurence of the character/sub
+# You can also give an index to start searching from
+p sentence.index("l")                     # Returns 1
+p sentence.index("ch")                    # Returns nil as elem not in array
+
+p sentence.index("l", 10)                 # Start searching for l from 10 index
+
+# .rindex(sub, start) -> returns the index of first occurence of the character/sub from the right
+p sentence.rindex("l")
+
+# .delete(characters) -> returns a new copy of the string after removing all occrurences of the given characters
+p sentence.delete("i")
+
+p sentence.delete("lt")
