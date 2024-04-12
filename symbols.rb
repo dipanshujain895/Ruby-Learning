@@ -8,3 +8,17 @@
 p :sym
 
 p :sym.object_id, :sym.object_id
+
+p :sym.class
+
+# p :sym.methods.length                   # 81 methods available
+# p "hello".methods.length                # 181 methods available
+
+a = "hello"
+b = "hello"
+p "#{a.object_id}, #{b.object_id}"        # both strings are different objects
+
+a = :hello
+b = :hello
+p "#{a.object_id}, #{b.object_id}"        # both symbols are same symbol object
+

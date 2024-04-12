@@ -206,3 +206,88 @@ p nums.include?(99)                     # Returns false
 
 p nums.max
 p nums.min
+
+# .reverse()/.reverse!() - reverse an Array (! -> in-place)
+p nums.reverse()
+nums.reverse!
+p nums
+
+
+# .sort() - sort an Array in ascending/alphabetical order (! -> in-place)
+nums = [1, 121, 484, 1089, 4, 9, 16, 25, 36]
+
+p nums.sort
+p nums.sort.reverse                     # Chaining sort and reverse to get descending
+nums.sort!                              # Sort in-place
+p nums
+
+# .uniq() - return an array without the duplicate elements (! -> in-place)
+nums2 = [1, 4, 9, 16, 4, 2, 11, 2, 10]
+unique_nums = nums2.uniq
+p unique_nums
+
+nums2.uniq!                            # Removed duplicates in place
+p nums2
+
+# .compact() - removes nil from array (! -> in-place)
+items = ["Steak", nil,"Baked Potato", "Tofu", nil, nil, "Carrot"]
+p items.compact
+items.compact!
+p items
+
+# .inject {}/.reduce {} - Return a new value by combining all elements of array or perform operation
+# .inject { |aggregate, current| your_work } - aggregate is the aggregated value till now
+
+sum = nums2.inject {|sum, curr| sum=sum+curr }
+p sum
+
+prod = nums2.reduce {|prod, curr| prod=prod*curr }
+p prod
+
+# .flatten() - Used to flatten a nested array to 1-d array (! -> in-place)
+nested_arr = [
+    [11, 21, 31],
+    [12, 22, 32],
+    [13, 23, 33]
+]
+flattened = nested_arr.flatten
+p flattened
+
+nested_arr.flatten!
+p nested_arr
+
+# .sample() - extract one or more random elements from array
+iceCreamFlavors = [
+    "Vanilla",
+    "Chocolate",
+    "Strawberry",
+    "Mint Chocolate Chip",
+    "Cookies and Cream",
+    "Butter Pecan",
+    "Rocky Road",
+    "Coffee",
+]
+p iceCreamFlavors.sample                    # return 1 sample element
+p iceCreamFlavors.sample(4)                 # return 4 sample elements
+
+# Arrays can be multiplied using (*)
+arr4 = [1,2,3]
+p arr4 * 3                                 # returns 3 times repeated array
+
+# Merge Arrays and Exclude Duplicates
+# Symbol (|) is used to create union of any array elements (remove all duplicates)
+arr5 = [1,2,3,4,5]
+arr6 = [2,3,8,7,1,9]
+p arr5 | arr6
+p arr5.|(arr6)                  # .| is pipe method of array which does the same
+
+# Remove items that exists in another Array
+# (-) sign can be used to remove all items from first array that exists in second array
+p arr5 - arr6
+p arr5.-(arr6)                 # .- is subtract method of array which does the same
+
+# Array Intersection and (&) operator
+# Keep only those elements that are found in both
+
+p arr5 & arr6
+p arr5.&(arr6)                 # .& is intersection method of array which does the same
