@@ -20,7 +20,33 @@ Before getting started, ensure you have Ruby version 3.2 installed on your syste
 # Example installation using Homebrew on macOS
 brew install ruby
 ```
+If Ruby is pre installed, and version is different from what we need, you can use rbenv
 
+```bash
+# Example installation using Homebrew on macOS
+brew install rbenv
+
+# After that run these commands on your shell
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+
+# Install ruby-build: This is a rbenv plugin that provides an "rbenv install" command
+brew install ruby-build
+
+#Install Ruby 3.2.2:
+rbenv install 3.2.2
+
+# Set global Ruby version:
+rbenv global 3.2.2
+```
+
+Verify installation:
+
+```bash
+ruby -v
+
+```
 After installing Ruby, execute the following commands to install essential gems:
 
 ```bash
