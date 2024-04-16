@@ -172,3 +172,103 @@ puts s2
 
 # p s1
 # p s1.percentage
+
+# Access Modifier
+
+# Public methods can be called by any object
+# Private methods can be declared by writing them under private keyword
+# Private methods can only be called by internal methods
+# Protected methods can only be called by internal methods or objects of the same class
+
+class SmartPhone
+  attr_reader :username, :production_number
+  attr_writer :password
+
+  def initialize(username, password)
+    @username = username
+    @password = password
+    @production_number = generate_random_number
+  end
+
+  def print_details
+    puts "Username: #{username}"
+    puts "Production_number: #{production_number}"
+  end
+
+  private
+
+  def generate_random_number
+    random_number = rand(100_000..999_999)
+    another_random_number = rand(100_000..999_999)
+    return "2024-#{random_number}-#{another_random_number}"
+  end
+end
+
+smart_phone = SmartPhone.new("Rishabh","rish@123")
+smart_phone.print_details
+# smart_phone.generate_random_number            # this will give an error as method is private
+
+class Car3
+  def initialize(model, value)
+    @model = model
+    @value = value
+  end
+
+  def compare_car_value(car)
+    self.value > car.value ? "#{self.model} is better": "#{car.model} is better"
+  end
+
+  protected
+  def value
+    @value
+  end
+
+  def model
+    @model
+  end
+end
+
+
+swift = Car3.new("Swift Dzire", 10_00_000)
+alto = Car3.new("Alto", 3_00_000)
+baleno = Car3.new("Baleno", 8_00_000)
+
+# puts swift.value                                  # Will give error as it's protected
+puts swift.compare_car_value(alto)
+puts alto.compare_car_value(baleno)
+
+# Class methods - Methods that are invoked on the class rather than an instance
+# Class methods can be called without creating an instance/object of the class
+
+# Class methods can be created using
+# 1. ClassName.method - If class name changes need to change everywhere
+# 2. self.method - Here self indicates the class name and will not require any changes
+
+class Vehicle
+  attr_accessor :wheels, :passengers
+
+  def initialize(wheels, passengers)
+    @wheels=wheels
+    @passengers=passengers
+  end
+
+  # Class methods
+  def Vehicle.hello
+    puts "Hello, I am a class method"
+  end
+  def self.bye
+    puts "Bye Bye - from class method"
+  end
+
+  def print_details
+    puts "Wheels: #{wheels}"
+    puts "Passengers: #{passengers}"
+  end
+end
+
+Vehicle.hello
+Vehicle.bye
+
+v1 = Vehicle.new(4, 3)
+v1.print_details
+v1.hello                                  # 
