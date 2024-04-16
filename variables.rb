@@ -47,3 +47,6 @@ x ||= 5         # Assigns the value to the variable since variable is nil
 p x
 x ||= 10        # Doesnt change the value as variable is not nil
 p x
+
+
+# Go to numbers.rb

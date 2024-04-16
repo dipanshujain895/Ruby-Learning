@@ -10,3 +10,5 @@ puts rand.round(2)                  # 0.142145 -> 0.14 (rounded)
 puts rand(100)                      # 0 to 99
 puts rand(1..20)                    # Inclusive 20
 puts rand(1...20)                   # Exclusive 20
+
+# Go to blocks.rb if you came here from functions.rb

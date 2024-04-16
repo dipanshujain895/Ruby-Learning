@@ -8,3 +8,6 @@
 Kamisama Hajimemashita
 Kamisama Onegai
 =end
+
+
+# Go to prints.rb

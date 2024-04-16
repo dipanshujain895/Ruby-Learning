@@ -139,12 +139,19 @@ p s13.empty?
 s13 = "Hello world"
 p s13.reverse
 p s13                   # Doesnt change the original string
+
+
 # Bang methods
 # Major of the String methods have a bang equivalent of them (Update original object)
 # .upcase!, .downcase!, .swapcase!, .reverse!
 
 s13.reverse!
 p s13                   # The original string got reversed
+
+# Go to loops.rb
+
+
+# Come here after going through arrays.rb
 
 # String slicing using ranges
 s14 = "Once upon a time in Mumbai"
@@ -203,3 +210,6 @@ p sentence.rindex("l")
 p sentence.delete("i")
 
 p sentence.delete("lt")
+
+# Go to Symbols.rb then,
+# Go to object_methods.rb again to resume your learning

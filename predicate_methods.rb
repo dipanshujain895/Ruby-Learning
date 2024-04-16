@@ -17,3 +17,5 @@ p x.positive?                   # check for positive number
 p x.negative?                   # check for negative number
 
 # predicate methods can't work without the question mark (?)
+
+# Go to arithemetic_methods.rb

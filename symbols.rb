@@ -22,3 +22,4 @@ a = :hello
 b = :hello
 p "#{a.object_id}, #{b.object_id}"        # both symbols are same symbol object
 
+# Go back to object_methods.rb/hashes.rb, wherever you came from

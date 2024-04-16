@@ -12,3 +12,4 @@ p 10.*(5)
 p 10./(5)
 p 10.div(5) # only div exists as an extra method
 
+# Go to functions.rb

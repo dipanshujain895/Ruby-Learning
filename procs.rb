@@ -39,3 +39,6 @@ puts
 
 talk_about2("Rishabh") { |name| puts "#{name} is a special guy" }   # passing as normal block
 talk_about("Adi", &good_thing)
+
+
+# Go to lambdas.rb

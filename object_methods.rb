@@ -50,6 +50,10 @@ obj = nil               # Make object nil to check
 p obj == nil
 p obj.nil?
 
+# Go to inputs.rb
+
+# Come here after learning strings.rb
+
 # Bang methods
 # They are methods that end with a ! (Exclamation/Bang)
 # They perform some kind of mutation (a change)
@@ -85,3 +89,5 @@ p s2                                  # Changes only reflected in s1 and not in 
 s1.freeze
 # s1.delete!("E")                       # Will give error "Cant modify frozen string"
 p s1
+
+# Go to hashes.rb

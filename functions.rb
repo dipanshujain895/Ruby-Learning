@@ -1,5 +1,6 @@
 # def used to define functions and end used to end function definition
 # default values for arguments can be provided
+
 # The function can be called with or without parantheses accordingly with their arguments
 # To provide any number of arguments to a function we can use *arg in arguments
 
@@ -63,3 +64,7 @@ def adder(a,b,*nums, c, d)
 end
 
 p adder(1,2,3,4,5,6)      # Ruby will read it as a=1,b=2,nums=[3,4],c=5,d=6
+
+# Go to random.rb for understanding random module then
+# Go to blocks.rb
+

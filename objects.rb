@@ -18,8 +18,7 @@ x = nil
 p x
 
 # Object Referencing
-#
-#
+
 a = [1,2,3,4]
 b = a
 
@@ -28,3 +27,5 @@ p "#{b}, #{b.object_id}"                # Will return same as above as reference
 
 p [1,2,3,4].object_id
 p [1,2,3,4].object_id                   # Everytime new object is created with new object_id
+
+# Go to object_methods.rb

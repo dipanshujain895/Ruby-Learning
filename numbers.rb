@@ -40,17 +40,29 @@ puts f.round(2)         # returns rounded float to 2 decimal places
 
 puts f.abs              # returns absolute number i.e +ve version if -ve number else same
 
-  # Spaceship Operator (<=>)
-  # Returns -1, 0, 1, or nil
-  # Returns 1 if left is greater than right
-  # Returns -1 if right is greater than left
-  # Returns 0 if both are equal
-  # Returns nil if the values cannot be compared
+# Arithematic and Logical Operators in Ruby are same as other languages 
 
-  p 5 <=> 5
-  p 10 <=> 5                  # Output 1 because left greater than right
-  p [1,2,3] <=> [1,2,3]       # Output 0 because both are equal
-  p [1,2,3] <=> [1,2,10]      # Output -1 because right is greater as 3rd elem is greater
-  p 10 <=> [1,2,3]            # Output nil because incomparable types
+puts 5 + 5
+puts 5 - 5
+puts 5 * 5
+puts 5 / 5
+puts 5 % 5
 
-  # Arrays are compared element by element
+
+# Spaceship Operator (<=>)
+# Returns -1, 0, 1, or nil
+# Returns 1 if left is greater than right
+# Returns -1 if right is greater than left
+# Returns 0 if both are equal
+# Returns nil if the values cannot be compared
+
+p 5 <=> 5
+p 10 <=> 5                  # Output 1 because left greater than right
+p [1,2,3] <=> [1,2,3]       # Output 0 because both are equal
+p [1,2,3] <=> [1,2,10]      # Output -1 because right is greater as 3rd elem is greater
+p 10 <=> [1,2,3]            # Output nil because incomparable types
+
+# Arrays are compared element by element
+
+
+# Go to objects.rb

@@ -5,3 +5,6 @@
 print "#{true}, #{true.class}"
 
 print "#{false}, #{false.class}"
+
+
+# Go to predicate_methods.rb

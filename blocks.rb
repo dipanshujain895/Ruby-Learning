@@ -48,6 +48,9 @@ end
   puts "At Step #{current}"
 end
 
+# Go to conditionals.rb
+
+
 arr1 = [1,2,3,4,5]
 arr1.each { |value| p value}
 

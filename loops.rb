@@ -31,7 +31,7 @@ while(count<10)
   count+=1
 end
 
-# For loop using ranges
+# For loop using ranges                                         # Refer ranges.rb for this once
 for i in 1..10 
   print i," "
 end
@@ -44,3 +44,4 @@ for elem in arr
   print elem," "
 end
 
+# Go to debugging.rb

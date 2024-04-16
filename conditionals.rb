@@ -70,6 +70,9 @@ unless x==5
   p ("Hi")
 end
 
+# Go to strings.rb
+
+#
 
 # case-when using ranges
 print("Enter Day Number Again: ")
@@ -106,3 +109,5 @@ end
 
 res = calculate_test_grade(75)
 p res
+
+

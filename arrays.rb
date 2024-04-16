@@ -291,3 +291,6 @@ p arr5.-(arr6)                 # .- is subtract method of array which does the s
 
 p arr5 & arr6
 p arr5.&(arr6)                 # .& is intersection method of array which does the same
+
+# Go to ranges.rb once if you haven't done it till now then,
+# Go to strings.rb again for the functions that uses arrays

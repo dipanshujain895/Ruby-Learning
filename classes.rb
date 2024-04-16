@@ -271,4 +271,4 @@ Vehicle.bye
 
 v1 = Vehicle.new(4, 3)
 v1.print_details
-v1.hello                                  # 
+# v1.hello                                  # Will not work as hello is a class method

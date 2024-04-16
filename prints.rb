@@ -25,3 +25,6 @@ p "Hello World \n Hello"  # Will show \n as it is in output
 
 puts "Hello World \n Hello".inspect         # This will be same as calling p
 p "Hello World \n Hello"                    # Will print with double quotes
+
+
+# Go to numbers.rb

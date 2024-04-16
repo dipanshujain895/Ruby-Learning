@@ -1,3 +1,5 @@
+# Note: If you haven't gone through Symbols.rb, Go through it once and then come back here
+
 # Hashes in ruby are same as dictionary in python
 # Hashes are data structure containing key-value pairs
 
@@ -166,3 +168,4 @@ hash2[:rishabh]  = "9773"
 
 p hash2
 
+# Go to procs.rb
